@@ -45,6 +45,8 @@ main{
     overflow: hidden;
     background-color: #fff;
     border: solid 10px white;
+    animation: loading 2s ease-in-out 3;
+    background-size: 400% 100%;
 }
 
 .grid-items img{
@@ -53,7 +55,7 @@ main{
     width: 100%;
     object-fit:cover;
     transform: scale(1);
-    opacity: 0.8;
+    opacity: 0;
     transition: 1s ease;
 }  
 
@@ -173,4 +175,16 @@ main{
     position:absolute;
     left: 1325px;
     transform: rotateY(0deg) translateX(-30px);
+}
+
+@keyframes loading {
+    0% {
+        background-image: linear-gradient(90deg, lightgray 25%, white 50%, lightgray 75%);
+        background-position: -100% 0;
+    }
+    
+    100% {
+        background-image: linear-gradient(90deg, lightgray 25%, white 50%, lightgray 75%);
+        background-position: 0% 0;
+    }
 }

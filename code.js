@@ -7,6 +7,10 @@ function toggleStyle() {
     } else {
         slideContainer.classList.add('invisible')
         gridContainer.classList.remove('invisible')
+        const img = document.querySelectorAll(".grid-items img")
+        img.forEach(image => {
+            image.style.opacity = 0;
+        })
 
     }
 }
@@ -38,4 +42,16 @@ const buttonLeft = document.getElementById("left")
 
 buttonRight.addEventListener("click", () => slideSelected = showNextSlide(checkboxes, slideSelected))
 buttonLeft.addEventListener("click", () => slideSelected = showPreviousSlide(checkboxes, slideSelected))
+
+const img = document.querySelectorAll(".grid-items img")
+img.forEach(image => {
+    image.style.opacity = 0;
+})
+const gridDiv = document.querySelectorAll(".grid-items")[0]
+gridDiv.addEventListener("animationend", () => {
+    const img = document.querySelectorAll(".grid-items img")
+    img.forEach(image => {
+        image.style.opacity = 0.8;
+    })
+})
 
