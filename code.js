@@ -1,7 +1,5 @@
-var slideSelected = 0;
-const toggleButton = document.getElementById("toggle-mode-view-button")
-const gridContainer = document.getElementById("grid-container-imgs")
-const slideContainer = document.getElementById("container-slide-main")
+import { showNextSlide, showPreviousSlide } from './libs/funcs.js';
+
 function toggleStyle() {
     if (toggleButton.checked) {
         slideContainer.classList.remove('invisible')
@@ -9,9 +7,14 @@ function toggleStyle() {
     } else {
         slideContainer.classList.add('invisible')
         gridContainer.classList.remove('invisible')
-        
-    }0
+
+    }
 }
+
+var slideSelected = 0;
+const toggleButton = document.getElementById("toggle-mode-view-button")
+const gridContainer = document.getElementById("grid-container-imgs")
+const slideContainer = document.getElementById("container-slide-main")
 
 toggleButton.addEventListener("change", toggleStyle)
 toggleStyle() 
@@ -30,33 +33,9 @@ checkboxes.forEach((checkbox, index) => {
     });
 });
 
-
 const buttonRight = document.getElementById("right")
 const buttonLeft = document.getElementById("left")
 
-buttonRight.addEventListener("click", showNextSlide)
+buttonRight.addEventListener("click", () => slideSelected = showNextSlide(checkboxes, slideSelected))
+buttonLeft.addEventListener("click", () => slideSelected = showPreviousSlide(checkboxes, slideSelected))
 
-function showNextSlide() {
-    if (slideSelected < checkboxes.length - 1) {
-        slideSelected++;
-    } else {
-        slideSelected = 0
-    }
-    checkboxes.forEach(checkbox => {
-        checkbox.checked = false;
-    })
-    checkboxes[slideSelected].checked = true;
-}
-buttonLeft.addEventListener("click", showPreviousSlide)
-
-function showPreviousSlide() {
-    if (slideSelected <= 0 ) {
-        slideSelected = checkboxes.length - 1;
-    } else {
-        slideSelected--;
-    }
-    checkboxes.forEach(checkbox => {
-        checkbox.checked = false;
-    })
-    checkboxes[slideSelected].checked = true;
-}
