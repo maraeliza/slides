@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <h1 class="title">Album de fotos</h1>
+
+        <div class="container-header">
+            <div id="container-button-toggle-mode-view">
+                <input type="checkbox" id="toggle-mode-view-button">
+                <div id="icon-toggle-mode-view-button"></div>
+            </div>
+        </div>
+        
+            <div id="grid-container-imgs">
+                <div class="grid-items">
+                    <img src="https://picsum.photos/500/400?random=1" alt="imagem">
+                </div>
+                <div class="grid-items">
+                    <img src="https://picsum.photos/500/400?random=1" alt="imagem">
+                </div>
+                <div class="grid-items">
+                    <img src="https://picsum.photos/500/400?random=1" alt="imagem">
+                </div>
+                <div class="grid-items">
+                    <img src="https://picsum.photos/500/400?random=1" alt="imagem">
+                </div>
+                <div class="grid-items">
+                    <img src="https://picsum.photos/500/400?random=1" alt="imagem">
+                </div>
+                <div class="grid-items">
+                    <img src="https://picsum.photos/500/400?random=1" alt="imagem">
+                </div>
+            </div>
+      
+
+        <div id="container-slide-main">
+            <div class="container-slide">
+                <div class="container-slide-view">
+                    <button class="toggle-slide" id="left"><img src="seta-esquerda.png"></button>
+                    
+                    <div class="container-slide-img">
+                        <input type="checkbox" name="image-selection" id="img1">
+                        <img class="slide-img" src="https://picsum.photos/500/400?random=1" alt="">
+                    </div>
+                    <div class="container-slide-img">
+                    <input type="checkbox" name="image-selection" id="img2">
+                        <img class="slide-img" src="https://picsum.photos/500/400?random=2" alt="">
+                    </div>
+                    <div class="container-slide-img">
+                        <input type="checkbox" name="image-selection" id="img3">
+                        <img class="slide-img" src="https://picsum.photos/500/400?random=3" alt="">
+                    </div>
+                    <div class="container-slide-img">
+                        <input type="checkbox" name="image-selection" id="img4">
+                        <img class="slide-img" src="https://picsum.photos/500/400?random=4" alt="">
+                    </div>
+                    <div class="container-slide-img">
+                        <input type="checkbox" name="image-selection" id="img5">
+                        <img class="slide-img" src="https://picsum.photos/500/400?random=5" alt="">
+                    </div>
+                    <button class="toggle-slide" id="right"><img src="seta-direita.png"></button>
+                </div>
+
+
+            <!-- <div>
+                <div class="container-slide-option">
+                    <input type="checkbox" name="image-selection" id="option-img1">
+                    <img class="option-slide-img" src="https://picsum.photos/500/400?random=1" alt="">
+                </div>
+            </div> -->
+        </div>
+    </main>
+    
+    <!-- 
+    <img src="https://picsum.photos/500/400?random=2" alt="imagem"> -->
+
+    <script src="./code.js"></script>
+</body>
+</html>
