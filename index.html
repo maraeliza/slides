@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Desafio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <h2>Desafio Slides</h2>
-        <a href="./index.html">Album de fotos</a>
-        <a href="./animations.html">Animação</a>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-links">
+            <a href="./index.html">Álbum de Fotos</a>
+            <a href="./calc/index.html">Calculadora</a>
+            <a href="./cubo/index.html">Cubo 3D</a>
+        </div>
     </nav>
-    
+
+
     <main id="main-content">
         <h1 class="title">Album de Fotos</h1>
 
@@ -99,7 +104,12 @@
                 </div>
         </div>
     </main>
-    
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
     <script type="module" src="./code.js"></script>
 </body>
 </html>

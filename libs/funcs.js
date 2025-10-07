@@ -1,5 +1,4 @@
 function showNextSlide(checkboxes, slideSelected) {
-    console.log("cliquei para mostrar o proximo slide")
     if (slideSelected < checkboxes.length - 1) {
         slideSelected++;
     } else {
