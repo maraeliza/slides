@@ -35,8 +35,7 @@ main{
     margin: auto;
     width: 80%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3, 30rem);
+    grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
     gap:50px;
 }
 
